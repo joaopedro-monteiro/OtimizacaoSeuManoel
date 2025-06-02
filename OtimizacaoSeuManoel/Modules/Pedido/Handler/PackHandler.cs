@@ -59,7 +59,7 @@ public class PackHandler
             {
                 CaixaId = null,
                 Produtos = nomeProdutoNaoEmbalado!,
-                Obersavacao = "Produto não cabe em nenhuma caixa disponível."
+                Observacao = "Produto não cabe em nenhuma caixa disponível."
             };
             return produtosNaoEmbalados;
         }

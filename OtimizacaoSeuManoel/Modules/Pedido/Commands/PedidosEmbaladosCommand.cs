@@ -27,5 +27,6 @@ public class CaixasEmbalagem
 {
     public string? CaixaId { get; set; }
     public List<string> Produtos { get; set; } = new List<string>();
-    public string? Obersavacao { get; set; }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Observacao { get; set; }
 }
