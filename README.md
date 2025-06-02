@@ -28,7 +28,7 @@ A biblioteca considera que os itens podem ser rotacionados, o que resulta em:
 
 Na abordagem estática, a Caixa 1 seria descartada (altura do PS5 > altura da caixa). Porém, com rotação, o PS5 pode ser acomodado.
 
-Sendo assim, algoritmo que eu desenvolvi considera essas rotações para armazenar da maneira mais otimizada, acarretando em uma saida.json diferente.
+Sendo assim, algoritmo desenvolvido considera essas rotações para armazenar da maneira mais otimizada, acarretando em uma saida.json diferente.
 
 ## 🚀 Como Executar
 
@@ -42,7 +42,7 @@ git clone https://github.com/joaopedro-monteiro/OtimizacaoSeuManoel.git
 cd OtimizacaoSeuManoel
 docker-compose up -d
 ```
-###🔐 Autenticação
+## 🔐 Autenticação
 O sistema utiliza ASP.NET Identity. Siga estes passos:
 
 Observação muito importante: o sistema possui um sistema de autenticação, utilizando Asp.Net Identity, então é necessário que o usuário crie uma conta no endpoint '/register', a senha poderá ser qualquer uma, não há verificação de força da senha, o e-mail também poderá ser qualquer um desde que seja no formato de e-mail.
@@ -66,7 +66,7 @@ POST /login
 }
 ```
 
-###📦 Endpoint de Empacotamento
+## 📦 Endpoint de Empacotamento
 ```
 POST /api/pedidos/embalar
 {
@@ -88,14 +88,14 @@ POST /api/pedidos/embalar
 }
 ```
 
-###🏗️ Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 -Endpoints CRUD para Pedidos e Produtos (demonstração)
 
 -Endpoint especializado /api/pedidos/embalar para cálculo de empacotamento com autenticação necessária
 
 -Classes dedicadas para o endpoint de empacotamento
 
-###🐳 Docker
+## 🐳 Docker
 ```
 docker pull joaopedromonteiro/docker-seu-manoel-app
 ```
