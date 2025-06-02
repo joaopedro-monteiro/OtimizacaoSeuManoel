@@ -1,11 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using OtimizacaoSeuManoel.Modules.Pedido.Entities;
 using OtimizacaoSeuManoel.Modules.Produto.Entities;
 
 namespace OtimizacaoSeuManoel.Context;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<IdentityUser>
 {
     private static readonly object Locker = new();
     private static bool _migrated;
