@@ -42,6 +42,14 @@ git clone https://github.com/joaopedro-monteiro/OtimizacaoSeuManoel.git
 cd OtimizacaoSeuManoel
 docker-compose up -d
 ```
+
+## Banco de Dados
+```
+localhost
+user: sa
+password: ef66b58b-6ff2-4c78-bcec-6b279312b625
+```
+
 ## 🔐 Autenticação
 O sistema utiliza ASP.NET Identity. Siga estes passos:
 
