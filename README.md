@@ -88,6 +88,20 @@ POST /api/pedidos/embalar
 }
 ```
 
+# OtimizacaoSeuManoel.Test
+
+Projeto de testes unitários para a API.
+
+## 🧪 Sobre os Testes
+
+Testes unitários desenvolvidos para validar o algoritmo de empacotamento da aplicação, utilizando:
+
+- **XUnit** como framework de testes
+- **Casos de teste** representativos:
+  - Pedido 1: Caso básico de empacotamento
+  - Pedido 5: Caso onde nenhuma das caixas é capaz de embalar o produto
+  - Pedido 11: Caso com grande volume de itens (teste de estresse) -> Este caso não está no entrada.json, foi gerado por mim
+
 ## 🏗️ Estrutura do Projeto
 -Endpoints CRUD para Pedidos e Produtos (demonstração)
 
