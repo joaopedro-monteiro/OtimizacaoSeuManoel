@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OtimizacaoSeuManoel.Modules.Pedido.Commands;
 using OtimizacaoSeuManoel.Modules.Pedido.Entities;
 using OtimizacaoSeuManoel.Modules.Pedido.Services;
@@ -15,7 +16,20 @@ public class PedidoController : ControllerBase
     {
         _pedidoService = pedidoService;
         _empacotamentoService = empacotamentoService;
-    }    
+    }
+
+    [Authorize]
+    [HttpPost("embalar")]
+    public Task<IActionResult> EmbalarPedidos([FromBody] PedidosEmbaladosEntradaCommand pedido, CancellationToken cancellationToken)
+    {
+        if (pedido == null)
+            return Task.FromResult<IActionResult>(BadRequest("Pedido não pode ser nulo."));
+
+        var packedOrder = _empacotamentoService.EmbalarPedidos(pedido, cancellationToken);
+        if (packedOrder == null)
+            return Task.FromResult<IActionResult>(NotFound("Pedido não encontrado ou não pode ser embalado."));
+        return Task.FromResult<IActionResult>(Ok(packedOrder));
+    }
 
     [HttpGet]
     public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
@@ -61,17 +75,5 @@ public class PedidoController : ControllerBase
     {
         await _pedidoService.DeleteAsync(id, cancellationToken);
         return NoContent();
-    }
-
-    [HttpPost("embalar")]
-    public async Task<IActionResult> EmbalarPedidos([FromBody] PedidosEmbaladosEntradaCommand pedido, CancellationToken cancellationToken)
-    {
-        if (pedido == null)
-            return BadRequest("Pedido não pode ser nulo.");
-        
-        var packedOrder = _empacotamentoService.EmbalarPedidos(pedido, cancellationToken);
-        if (packedOrder == null)
-            return NotFound("Pedido não encontrado ou não pode ser embalado.");
-        return Ok(packedOrder);
     }
 }
