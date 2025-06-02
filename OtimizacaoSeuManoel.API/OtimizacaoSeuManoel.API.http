@@ -1,0 +1,6 @@
+@OtimizacaoSeuManoel.API_HostAddress = http://localhost:5047
+
+GET {{OtimizacaoSeuManoel.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

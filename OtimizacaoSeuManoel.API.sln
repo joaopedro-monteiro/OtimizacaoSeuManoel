@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtimizacaoSeuManoel.API", "OtimizacaoSeuManoel.API\OtimizacaoSeuManoel.API.csproj", "{8719C5A8-FD2F-4399-AD9C-0F13836E3C5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55646645-383F-48B2-999A-D99B18629ED4} = {55646645-383F-48B2-999A-D99B18629ED4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtimizacaoSeuManoel", "OtimizacaoSeuManoel\OtimizacaoSeuManoel.csproj", "{55646645-383F-48B2-999A-D99B18629ED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8719C5A8-FD2F-4399-AD9C-0F13836E3C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8719C5A8-FD2F-4399-AD9C-0F13836E3C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8719C5A8-FD2F-4399-AD9C-0F13836E3C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8719C5A8-FD2F-4399-AD9C-0F13836E3C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55646645-383F-48B2-999A-D99B18629ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55646645-383F-48B2-999A-D99B18629ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55646645-383F-48B2-999A-D99B18629ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55646645-383F-48B2-999A-D99B18629ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F49600B-B3D8-43ED-8A69-1CA803F66008}
+	EndGlobalSection
+EndGlobal
